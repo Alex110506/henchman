@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Hanken Grotesk", Arial, sans-serif;
+    background-color: #262626;
+    color: #D9D9D9;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.game-tit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.game-tit p{
+    color: rgba(255, 255, 255, 0.521);
+    max-width: 400px;
+    margin: 0;
+}
+.game-status{
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin-block: 30px;
+}
+.won{
+    background-color: green;
+    color: #D9D9D9;
+}
+.lost{
+    background-color: rgb(177, 44, 44);
+    color: #D9D9D9;
+}
+.wrong{
+    font-size: 26px;
+    padding-top: 15px;
+    background-color: rgb(142, 118, 237);
+}
+.game-status h2,.game-status p{
+    margin: 5px;
+}
+.lang-div{
+    padding: 2px 6px;
+    margin: 2px;
+    border-radius: 4px;
+    position: relative;
+}
+.lang-cont{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 350px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.lang-div.lost::before {
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.miss-cont{
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-block: 30px;
+}
+.miss-cont div{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 28px;
+    padding-top: 5px;
+    margin: 0 2px;
+    background-color: #3a3a3a;
+    border-bottom: solid 1px white;
+}
+.alph-cont button.correct{
+    background-color: green;
+}
+.alph-cont button.wrong{
+    background-color: rgb(177, 44, 44);
+}
+.alph-cont{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(10,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    max-width: 550px;
+}
+.alph-cont button{
+    height: 50px;
+    width: 50px;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #e1a322;
+    border-radius: 4px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+.alph-cont button:disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+button.new-game {
+    background-color: #11B5E5;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    width: 225px;
+    height: 40px;
+    padding: 6px 12px;
+    display: block;
+    margin-inline: auto;
+    cursor: pointer;
+    margin-top: 30px;
+}
